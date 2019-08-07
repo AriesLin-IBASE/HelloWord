@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>[Git][教學] 02. 開始使用 GitHub， 註冊與建立repo。</title>
+<meta name="title" content="[Git][教學] 02. 開始使用 GitHub， 註冊與建立repo。">
+<meta http-equiv="Cache-control" content="public">
+<meta http-equiv="content-language" content="zh-tw">
+<meta http-equiv="max-age" content="604800">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://progressbar.tw/posts/3">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="language" content="zh-TW">
+<meta property="fb:app_id" content="373391753044058">
+<meta name="description" content="介紹如何申請Github帳號，以及如何利用它與本地端的電腦連接。">
+<meta name="copyright" content="思誠科技有限公司">
+<meta name="author" content="進度條線上教學">
+<meta name="google-site-verification" content="a5vww6zDFkgPWTcT2fHyr-PQR5hAXX-F1OXM_sYTC8I" />
+<meta property="fb:pages" content="1424227107627646" />
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://progressbar.tw/posts/3">
+<meta property="og:site_name" content="進度條Progress Bar程式線上教學">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="[Git][教學] 02. 開始使用 GitHub， 註冊與建立repo。">
+<meta property="og:image" content="https://progressbar.tw/uploads/post/card_image/3/Screen_Shot_2017-04-06_at_3.02.15_AM.png">
+<meta property="og:image:secure_url" content="https://progressbar.tw/uploads/post/card_image/3/Screen_Shot_2017-04-06_at_3.02.15_AM.png">
+<meta property="og:image:width" content="800" />
+<meta property="og:description" content="介紹如何申請Github帳號，以及如何利用它與本地端的電腦連接。">
+<meta name="image" content="https://progressbar.tw/uploads/post/card_image/3/Screen_Shot_2017-04-06_at_3.02.15_AM.png">
+<link rel="icon" href="/favicon.ico">
+<link rel="manifest" href="https://progressbar.tw/assets/icons/manifest-27eca3e8297eb7ff340deb3849b210185a459b3845456aa4d0036f6d966b3518.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" href="https://progressbar.tw/assets/icons/ms-icon-144x144-91f3810843503ce7a69429b8ee6f4e38872d9c3ff255ca7cd3e72746cd1b2b1b.png">
+<meta name="theme-color" content="#382d5e">
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"NewsArticle",
+  "image":{
+    "@type":"ImageObject",
+    "width":1440,"height":810,
+    "url":"https://progressbar.tw/uploads/post/card_image/3/Screen_Shot_2017-04-06_at_3.02.15_AM.png"
+  },
+  "url":"https://progressbar.tw/posts/3",
+  "headline":"[Git][教學] 02. 開始使用 GitHub， 註冊與建立repo。",
+  "thumbnailUrl":"https://progressbar.tw/uploads/post/card_image/3/Screen_Shot_2017-04-06_at_3.02.15_AM.png",
+  "keywords":[
+    "Tag:Coding","Tag:Swift",
+    "Tag:Beginner",
+    "Tag:iOS App Development",
+    "Tag:Online Courses",
+    "Publication:yiyi-network",
+    "LockedPostSource:0",
+    "Elevated:false",
+    "LayerCake:0"
+    ],
+  "author":{
+    "@type":"Organization ",
+    "name":"進度條Progress Bar程式線上教學",
+    "url":"https://progressbar.tw"
+  },
+  "creator":["進度條Progress Bar程式線上教學"],
+  "publisher":{
+    "@type":"Organization",
+    "name":"進度條Progress Bar程式線上教學",
+    "url":"https://progressbar.tw",
+    "logo":{
+      "@type":"ImageObject",
+      "width":144,
+      "height":144,
+      "url":"https://progressbar.tw/assets/icons/ms-icon-144x144-91f3810843503ce7a69429b8ee6f4e38872d9c3ff255ca7cd3e72746cd1b2b1b.png"
+    }
+  },
+  "mainEntityOfPage":"https://progressbar.tw/posts/3"
+  }
+</script>
+<link rel="stylesheet" media="all" href="/assets/application-ab8e0639e66ce298c284961ab908135eaed0def50a94acd85dd2502d7f74567e.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="/assets/application-eafefacc9fc88ccfb6153128544445a844125f956f7b630e66de33dc45f493ff.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<!--[if IE]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.2.0/es5-shim.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+<![endif]-->
+
+<script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+mixpanel.init("760b0c23660f212874d0436eeeed5057");
+  </script>
+
+
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '184166892091656'); // Insert your pixel ID here.
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=184166892091656&ev=PageView&noscript=1"
+/></noscript>
+
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="ml4TuFuoQ3g7/zvwDsxlBlGgozbHGnvA3tl5sc/AcoSzhm+pCZr1+8OyB/dgQDNzKVuY/P5Jhz1YCZ6fUwqYeQ==" />
+</head>
+<body id="main_body">
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button">
+<header class="mdl-layout__header">
+<div class="mdl-layout__header-row">
+<a href="/" class="mdl-layout-title">
+<img width="212px" src="/assets/home/progressbar_logo-9a330c6f92f01b7029527b1998b427e342c7e4c407ef02e28a0b5a0a8a52c80f.png" alt="Progressbar logo" />
+</a>
+
+<div class="mdl-layout-spacer"></div>
+
+<nav class="mdl-navigation mdl-layout--large-screen-only">
+<a class="mdl-navigation__link" href="/courses">線上教學</a>
+<button id="nav_article" class="mdl-button mdl-js-button mdl-navigation__link" style="line-height: normal;">
+文章
+</button>
+<ul class="mdl-menu mdl-navigation__link mdl-js-menu mdl-js-ripple-effect _nav_options_ul" for="nav_article">
+<a href="/serials">
+<li class="mdl-menu__item">圖文系列教學</li>
+</a> <a href="/posts">
+<li class="mdl-menu__item">所有文章</li>
+</a> <a href="/notes">
+<li class="mdl-menu__item">筆記</li>
+</a> </ul>
+<button id="nav_services" class="mdl-button mdl-js-button mdl-navigation__link" style="line-height: normal;">
+超值服務
+</button>
+<ul class="mdl-menu mdl-navigation__link mdl-js-menu mdl-js-ripple-effect _nav_options_ul" for="nav_services">
+<a href="/services/get_websites/build_website">
+<li class="mdl-menu__item">架站服務</li>
+</a> </ul>
+<a class="mdl-navigation__link" href="/users/sign_in">登入</a>
+</nav>
+</div>
+</header>
+<div class="mdl-layout__drawer">
+<a href="/" class="mdl-layout-title">
+進度條
+</a>
+<nav class="mdl-navigation">
+<a class="mdl-navigation__link" href="/users/sign_in">登入</a>
+<a class="mdl-navigation__link" href="/courses">線上教學</a>
+<a class="mdl-navigation__link" href="/services/get_websites/build_website">架站服務</a>
+<a class="mdl-navigation__link" href="/posts">所有文章</a>
+<a class="mdl-navigation__link" href="/serials">系列教學</a>
+<a class="mdl-navigation__link" href="/notes">筆記</a>
+</nav>
+</div>
+<main class="mdl-layout__content">
+<div id="page-content" class="page-content">
+
+<div id="posts-show" class="_main_content">
+<div class="mdl-grid">
+<article class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+<h1 class="title">[Git][教學] 02. 開始使用 GitHub， 註冊與建立repo。</h1>
+<h2 class="excerpt">介紹如何申請Github帳號，以及如何利用它與本地端的電腦連接。</h2>
+<div class="info">
+<span style="margin-right: 12px;">作者: 進度條編輯群</span>
+<span>
+更新日期:
+<time datetime="2018-12-17 15:34:27 +0800" itemprop="dateModified" content="2018-12-17 15:34:27 +0800">
+2018/12/17
+</time>
+</span>
+</div>
+<div class="_divided_line _thick"></div>
+<div>
+<div class="video_sections" style="padding-bottom: 32px;">
+<p>此文章也有影片介紹，可以搭配影片一起學習！</p>
+<div style="padding: 16px 0;">
+<p>
+<small>
+01. 建立Github帳號、方案介紹與變更主要Email
+</small>
+<small>
+<a href="/courses/12">(所屬課程)</a>
+</small>
+</p>
+<div class="ratio16_10 mdl-shadow--2dp">
+<div class="_inner">
+<div class="_content">
+<video id="videojs" class="_content video-js vjs-default-skin vjs-big-play-centered" controls preload="false" data-setup='{"playbackRates": [0.5, 1, 1.2, 1.5, 2, 2.5, 3, 4]}'>
+<source src="/courses/12/properties/536" type="video/mp4">
+<p class="vjs-no-js">
+To view this video please enable JavaScript, and consider upgrading to a web browser that
+<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+</p>
+</video>
+</div>
+</div>
+</div>
+</div>
+<br />
+<p>以下正式開始文章</p>
+<hr />
+</div>
+<div class="content">
+<p>Git 和 GitHub 是兩個有關聯但不同的東西，Git 是一種版本管理的工具, 如同svn, 微軟的team foundation server。</p>
+<p>GitHub 則是一個網站提供免費的空間讓你擺放你程式的Source Code (原始碼)<br />
+不過免費是有條件的，只要用免費的方案，Source code 就會是Open的, 大家都可以下載與觀看，如果不要Open, 那就使用付費方案吧。</p>
+<p>&nbsp;</p>
+<p><span style="background-color:#e9faff; color:#444444; font-family:arial,century gothic; font-size:13px; letter-spacing:0.6499999761581421px; line-height:22.100000381469727px"><strong><span style="color:#993300">本篇文章目的</span></strong> : &nbsp;註冊github 帳戶, 並建立第一個遠端倉庫(repo)</span></p>
+<p>&nbsp;</p>
+<p>每個版本管理都有自己的強項,&nbsp;git 來說的話大概就是branch 與其沿伸功能,不過本文並不會提到, 之後的文章才會對於這段描述。</p>
+<p>&nbsp;</p>
+<p>本文指描述到建立一個遠端的下載連結</p>
+<p><br />
+===============================================</p>
+<p>&nbsp;</p>
+<p><strong><span style="color:#993300">1. 註冊GitHub</span></strong></p>
+<p>連上<a href="https://github.com" target="_blank">GitHub</a>網站，然後點擊右上角的Sign In直接登入。</p>
+<p>&nbsp;</p>
+<p><img alt="git00.jpg" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/829/content_1.jpg" title="" /></p>
+<p>&nbsp;</p>
+<p>進入Join GitHub畫面之後填寫一些Create your personal account的基本資料</p>
+<p>Username : 使用者名稱</p>
+<p>Email Address: 電子郵件信箱</p>
+<p>password : 密碼</p>
+<p>填好資料的輸入框右邊會出現綠色的勾勾，然後按下方的「Create an account」鈕。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/830/content_2.jpg" /></p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/831/content_3.jpg" /></p>
+<p>&nbsp;</p>
+<p>接著進入下一頁，Step2的內容就是選擇免費及付費方案。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/832/content_4.jpg" /></p>
+<p>&nbsp;&nbsp;</p>
+<p>因為在GitHub裡面放的所有東西都是open的，如果在GitHub裡面放的東西不公開的話，比如說商業用途的code...等隱私性較高的東西，就要選擇付費方案每月$7塊美金。</p>
+<p>那我們這邊選擇的是Unlimited pubilc repositores for free(免費方案),到這裡都是給個人用戶的項目選擇，接下來的項目勾選則是給組織用戶勾選的，所以這邊我們就都不管，直接按「Continue」進入Step3。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/833/content_5.jpg" /></p>
+<p>&nbsp;</p>
+<p>Step3的內容就是一些基本的問卷填寫，隨便勾一勾後按「Submit」。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/834/content_6.jpg" /></p>
+<p>&nbsp;</p>
+<p>Submit完成後請至剛剛申請註冊的電子郵件信箱收GitHub發的驗證信件，並完成帳號驗證程序。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/835/content_6-1.jpg" /></p>
+<p><br />
+完成驗證後就直連進GitHub登入的畫面，這時我們可以直接點進「Your profile」。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/836/content_7.jpg" /></p>
+<p>&nbsp;</p>
+<p><span style="color:#993300"><strong>2. 建立Repo &nbsp;(Repositories)</strong></span></p>
+<p>然後點進Repositories，點擊右邊的「New」來建立一個新的程式庫。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/837/content_8.jpg" />&nbsp;&nbsp;<br />
+進入Create a new repository畫面後需輸入一些建立程式庫的資料，</p>
+<p>Owner : 這裡已設定好是使用者名稱</p>
+<p>Repository name : 程式庫名稱</p>
+<p>Description : 程式庫的相關描述</p>
+<p>Public | Private : 該程式庫適用的公開或隱私管理方案選項，如果是選擇Private的話，下方就會出現付費帳戶資料填寫項目，那我們這邊選擇的依然是Public(公開免費)，然後下方的Initialize this repository with a README項目要勾選，README就是這個程式庫工具內有很多的功能及使用方式的說明記錄，通常這個功能使用說明記錄都會被寫入一個README.md檔內。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/838/content_9.jpg" /></p>
+<p>&nbsp;</p>
+<p>Add .gitgnore : GitHub的檔案管理功能。</p>
+<p>這裡如果有選擇建立的話，會產生出名為.gitgnore的隱藏檔，被寫在該檔案內的檔名不會加入版本管理，通常是寫入一些程式自動新增的管理檔案，或是包含帳號密碼的設定檔。</p>
+<p>(不要把帳號密碼上傳應該是常識，尤其是公開在網路上)</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/839/content_10.jpg" /></p>
+<p>&nbsp;</p>
+<p>Add a license : 檔案授權使用權限設定。</p>
+<p>這裡設定None的話，代表檔案不授權公開使用，別人來使用你的檔案必須要自行負責。</p>
+<p>如果設定的是MIT License的話，代表檔案可供別人使用於任何用途，甚至修改。</p>
+<p>其它的License選項都有著不同授權的概念，詳細說明可參照旁邊的「i」</p>
+<p>連進其各種License說明網頁。&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/840/content_11.jpg" /></p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/841/content_12.jpg" /></p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/842/content_13.jpg" /></p>
+<p>&nbsp;</p>
+<p><strong><span style="color:#993300">3. 加入要版本管理的檔案</span></strong></p>
+<p>用Git 版本管理簡單來講, 就是將&quot;最初的&quot;檔案複製到例外一個資料夾,之後的所有的變動以, Patch或log 檔的形式記錄下來，我們使用的是GitHub提供給我們的網路資料夾, 所以理所當然的需要&quot;上傳&quot;我們要管理的檔案到GitHub網站，雖然GitHub也有提供圖形化介面的工具，但之前用過覺得不是很理想，而且之後架站也可能會使用Linux，所已還是提早習慣文字介面的好。</p>
+<p>&nbsp;</p>
+<p>Windows的話要先安裝git bash，可以參考這一篇&nbsp;</p>
+<p><a href="http://obtuseitlearner.pixnet.net/blog/post/121911872">Git 版本管理 (G1.0) Git 介紹與安裝 - Windows</a></p>
+<p>&nbsp;</p>
+<p>Linux 的話還沒有寫，之後本文會更新 &nbsp;如果沒有更新的話請留言提醒我。</p>
+<p>&nbsp;</p>
+<p>所以我們就直接在bash底下操作了</p>
+<p>Windows: git bash</p>
+<p>Linux : shell bash</p>
+<p>&nbsp;</p>
+<p>有幾種方式, 比較正規的方式是用 git remote 的方式，但我覺得要說的有點多, 所以本文先介紹最簡單的方式，要下載遠端的備份必須要用git clone指令，而且clone 下來後 remote 自動就設好了。</p>
+<p>(關於remote的簡易解釋在文末有介紹)</p>
+<p>&nbsp;</p>
+<p>首先開啟Git Bash (Windows系統) 或 Shell (Linux系統)</p>
+<p>a. cd 至你想放repo的路徑</p>
+<p>這裡就直接示範放在Desktop(桌面)</p>
+<p>$ cd Desktop</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/843/content_16.jpg" /></p>
+<p>&nbsp;</p>
+<p>b. 自動方式做clone</p>
+<p>因為git的套件已經安裝好了，所以這個步驟可以直接以自動的方式做clone的動作，點擊「clone or download」將裡面的網址(https://github.com/DemoProgressBarTw/RubyOnRailsTest.git)複製到bash，在網址前面加上 $ git clone，你就會發現資料都download下來了。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/844/content_17.jpg" /></p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/845/content_18.jpg" /></p>
+<p>&nbsp;</p> 
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/846/content_19.jpg" /></p>
+<p>&nbsp;</p>
+<p>download下來的資料夾在桌面上都會看得到，當然資料夾裡面的檔案內容也都可以看得到。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/847/content_20.jpg" /></p>
+<p>&nbsp;</p>
+<p>可能有人發現RubyOnRailsTest的資料夾裡怎麼會少一個檔案，</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/788/content_21.jpg" /></p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/848/content_22.jpg" /></p>
+<p>&nbsp;</p>
+<p>因為 &quot;.gitgnore&quot;是隱藏檔，雖然在外部資料夾裡看不到，但實際上這個檔是存在的。</p>
+<p><br />
+我們也可以在bash裡以下的指令來查詢該檔案，在Desktop底下輸入查詢 $ ls &nbsp;</p>
+<p>接著輸入查詢 $ cd RubyOnRailsTest/，再於RubyOnRailsTest資料夾底下輸入查詢 $ ls，然後輸入所有檔案查詢 $ ls -al，之後就可以看到.gitgnore這個檔案是存在的，同時也可以看到.git的版本控管檔也在這裡。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/849/content_23.jpg" /></p>
+<p>&nbsp;</p>
+<p>c. 直接在該資料夾裡面新增檔案</p>
+<p>首先打開RubyOnRailsTest資料夾，然後再打開文字編輯檔，新增文件，隨便輸入一段文字，例如:測試...等兩個字，然後儲存在這個資料夾裡，檔案叫Test。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/850/content_24.jpg" /></p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/851/content_25.jpg" /></p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/852/content_26.jpg" /></p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/853/content_27.jpg" /></p>
+<p>&nbsp;</p>
+<p>回到bash，在RubyOnRailsTest資料夾底下輸入查詢指令 $ ls，可以發現該資料夾內多了一個剛剛新增的文字檔 Test.rtf。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/854/content_28.jpg" /></p>
+<p>&nbsp;</p>
+<p>e. 在.git版本管理底下查詢資料夾狀態</p>
+<p>在.git版本管理底下RubyOnRailsTest資料夾裡面輸入 $ git status，以查詢這個資料夾的變化(顯示查詢結果為紅色字體)</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/855/content_29.jpg" /></p>
+<p>&nbsp;</p>
+<p>f. 避免.Ds_Store文檔重覆生成</p>
+<p>如果是在Mac底下操作的話，每次查詢都會一直生產.Ds_Store，.Ds_Store是 Apple 為 OS X 作業系統所創造的隱藏文件，目的在於存貯目錄的自定義屬性，很多用戶會選擇去刪除，但這個文檔是會一直『復活』的。</p>
+<p>&nbsp;</p>
+<p>參照以下建議做法可避免該文檔有一直復活的情況。</p>
+<p>&nbsp;</p>
+<p>將.Ds_Store這個檔名複製起來，然後輸入 $ vim .gitignore，進到.gitignore裡面，然後按「i」，將檔名加進來。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/856/content_30.jpg" /></p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/857/content_31.jpg" /></p>
+<p>&nbsp;</p>
+<p>輸入 :wq!，將其儲存起來即可。</p>
+<p>之後在做一次 $ git status查詢，查詢狀態會告訴你，.gitignore已被修改過了(紅色字體)。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/858/content_32.jpg" /></p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/859/content_33.jpg" /></p>
+<p>&nbsp;</p>
+<p>g. 記錄已修改過的.gitignore</p>
+<p>輸入 $ git add .gitignore 加入這個修改記錄，再輸入 $ git status 查詢狀態顯示這個修改已被記錄(綠色字體)，並且等待進入版本管理的commit。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/860/content_34.jpg" /></p>
+<p>&nbsp;</p>
+<p>h. 版本管理記錄的commit</p>
+<p>將剛剛修改.Ds_Store這個記錄commit至版本管理中，輸入$ git commit -m &quot;add .Ds_Store into .gitignore&quot;</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/861/content_35.jpg" /></p>
+<p>&nbsp;</p>
+<p>commit完後就可以看到file changed跟file insertion的訊息了。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/862/content_36.jpg" /></p>
+<p>&nbsp;</p>
+<p>i. log查詢</p>
+<p>輸入 $ git log 可查詢所有版本管理執行過的記錄，包含修改人、修改時間、修改序號、修改內容...等資訊，</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/863/content_37.jpg" /></p>
+<p>&nbsp;</p>
+<p>j. 本地端與遠端資料夾版本管理同步</p>
+<p>下載至本地端的版本管理資料夾與遠端版本管理資料夾是不同步的，好比本地端是一個倉庫，遠端是另一個倉庫，所以我們要進行兩邊倉庫同步的動作，這樣版本管理的內容才會是一致的。</p>
+<p>&nbsp;</p>
+<p>從本地端傳送(push)至遠端</p>
+<p>輸入 $ git push，然後它會要求你輸入用戶名稱及密碼，之後就會開始將本地端的資料傳送至遠端。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/864/content_38.jpg" /></p>
+<p>&nbsp;</p>
+<p>傳送完成後，回到遠端去看.gitgnore記錄(請先重新整理網頁)已顯示修改過。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/865/content_39.jpg" /></p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/866/content_40.jpg" /></p>
+<p>&nbsp;</p>
+<p>k. commit新增的檔案並同步至遠端</p>
+<p>首先要先加入剛剛新增的文字檔，輸入 $ git add Test.rtf。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/867/content_41.jpg" /></p>
+<p>&nbsp;</p>
+<p>如果一次要commit很多個檔案的話，可以直接輸入 $ git add --all。</p>
+<p>但要注意的是，下all的指令容易把一些不相關的檔案也加進去。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/868/content_42.jpg" /></p>
+<p>&nbsp;</p>
+<p>之後輸入查詢指令$ git status，可以看到所有的檔案被加進去的記錄(綠色字體)。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/869/content_43.jpg" /></p>
+<p>&nbsp;</p>
+<p>再來要將加入的檔案commit上去，輸入 $ git commit -m &quot;Add Test.rtf&quot;，</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/870/content_44.jpg" /></p>
+<p>&nbsp;</p>
+<p>接著就會看到檔案commit上去的記錄</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/871/content_45.jpg" /></p>
+<p>&nbsp;</p>
+<p>接下來要將剛剛commit的檔案同步至遠端，輸入 $ git push 將訊息傳送上去。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/872/content_46.jpg" /></p>
+<p>&nbsp;</p>
+<p>然後回到遠端(請先重新整理網頁)你就會發現githut上多了一個Test.rtf囉!</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/873/content_47.jpg" /></p>
+<p>&nbsp;</p>
+<p>l. 遠端修改README.md檔並同步至本地端</p>
+<p>README.md是githut的一個使用說明記錄檔的功能。</p>
+<p>我們可以直接在遠端上修改它，點入README.md</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/874/content_48.jpg" /></p>
+<p>&nbsp;</p>
+<p>點選編輯並新增一個file名稱，這裡要測試git pull的動作(從遠端同步至本地端)，所以這裡命名為Test pull，下方commit changes的資訊可不填寫，直接用預設的，然後按下「commit changes」鈕。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/875/content_49.jpg" /></p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/876/content_50.jpg" /></p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/877/content_51.jpg" /></p>
+<p>&nbsp;</p>
+<p>commit完成後，回到githut的RubyOnRailsTest底下，點進commit記錄，就會看到在遠端githut上面多了Update README.md的記錄。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/878/content_52.jpg" /></p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/879/content_53.jpg" /></p>
+<p>&nbsp;</p>
+<p>所以現在遠端的版本比本地端新，我們要做的是將遠端的版本同步(pull)至本地端，回到bash，輸入 $ git pull，這時會看到遠端的版本同步本地端的資訊。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/880/content_54.jpg" /></p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/881/content_55.jpg" /></p>
+<p>&nbsp;</p>
+<p>輸入 $ git log，可查詢到剛剛Update README.md的記錄。</p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/882/content_56.jpg" /></p>
+<p>&nbsp;</p>
+<p><img alt="" class="class=&quot;cliped_img&quot;" src="/uploads/ckeditor/pictures/883/content_57.jpg" /></p>
+<p>&nbsp;</p>
+<p>如此一來，從githut的註冊流程，到一些基本指令的操作就這樣完成囉!!</p>
+<p>記得所有的commit 要update 遠端的話 一定要做push的動作喔!!</p>
+<p>但是不用每次commit都push, push這動作會一次上傳所有還沒push過的commit。</p>
+<p>&nbsp;</p>
+<p>//==============================================</p>
+<p>&nbsp;</p>
+<p>所謂的remote 口語化解釋就是, 你下載下來的是&quot;一般&quot;的git repo，你可以&quot;自己&quot;commit , add ,rm 之類的使用 ，但今天如果是你想要同步兩組repo, 這時候可能就必須要用push 和 pull指令。</p>
+<p>&nbsp;</p>
+<p>用情境來解釋,假設有兩組repo, 名稱分別叫project 和 backup，project 就是一直在做的，backup 就是遠端備份，所以你平常都是在project底下做, add, rm, commit 等指令，等你告一個段落後, 會想要一次遠端備份, 避免硬碟壞軌之類的，這時候你就會在project底下 執行$ git push，這個指令會update 所有新的commit 到 backup底下。</p>
+<p>&nbsp;</p>
+<p>假設因為某種原因, 你的project 裡面的比 backup舊了，你不需要整個刪掉重新$ git clone,你只需要在project 底下執行,$ git pull，就會從backup 將所有新的commit 更新到project底下。</p>
+<p>&nbsp;</p>
+<p>當然前提是 project所設定的remote 對象必須要是該backup，本文不打算說明如何設定remote。</p>
+<p>&nbsp;</p>
+<p>下一篇<br />
+<a href="https://progressbar.tw/posts/49">[Git] 03. Git 指令讓人覺得困惑，讓Github Desktop程式帶你開始吧！</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<br />
+<p>最後，如果你喜歡我們的文章，別忘了到我們的<a href="https://goo.gl/h0cWrK" target="_blank">FB粉絲團</a>按讚喔!!</p>
+</div>
+</div>
+</article>
+<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+<div class="_divided_line _thick"></div>
+</div>
+<div class="author mdl-shadow--2dp">
+<div class="avator">
+<img src="/assets/home/small_logo-91f3810843503ce7a69429b8ee6f4e38872d9c3ff255ca7cd3e72746cd1b2b1b.png" alt="Small logo" />
+</div>
+<div class="info">
+<p>進度條編輯群</p>
+<div>
+進度條編輯團隊
+</div>
+</div>
+</div>
+<aside class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+<h4 style="margin-bottom: 16px;">關聯文章</h4>
+<hr style="width: 92%; margin:auto;" />
+<ul id="related-posts" class='mdl-list articles no_colors'>
+<li class="mdl-list__item mdl-list__item--three-line active">
+<span class="mdl-list__item-primary-content">
+<a href="/posts/3">
+<span>[Git][教學] 02. 開始使用 GitHub， 註冊與建立repo。</span>
+<span class="mdl-list__item-text-body">
+介紹如何申請Github帳號，以及如何利用它與本地端的電腦連接。
+</span>
+</a> </span>
+<span class="mdl-list__item-secondary-content">
+</span>
+</li>
+<li class="mdl-list__item mdl-list__item--three-line">
+<span class="mdl-list__item-primary-content">
+<a href="/posts/49">
+<span>[Git][教學] 03. Git 指令讓人覺得困惑，讓Github Desktop程式帶你開始吧！</span>
+<span class="mdl-list__item-text-body">
+雖然Git用下指令才能發揮威力，但降低門檻從圖形化介面入門也沒不好。
+</span>
+</a> </span>
+<span class="mdl-list__item-secondary-content">
+</span>
+</li>
+<li class="mdl-list__item mdl-list__item--three-line">
+<span class="mdl-list__item-primary-content">
+<a href="/posts/90">
+<span>還在為了找一個&quot;;&quot;浪費人生嗎，不如試試看 Beyond Compare 吧</span>
+<span class="mdl-list__item-text-body">
+還在為了找一個&quot;;&quot;浪費人生嗎，不如試試看 Beyond Compare 吧
+</span>
+</a> </span>
+<span class="mdl-list__item-secondary-content">
+</span>
+</li>
+<li class="mdl-list__item mdl-list__item--three-line">
+<span class="mdl-list__item-primary-content">
+<a href="/posts/1">
+<span>[Git][教學] 01 - Git 介紹與在Windows系統下安裝 </span>
+<span class="mdl-list__item-text-body">
+簡介Git 版本管理以及在Windows系統底下的安裝方式。
+</span>
+</a> </span>
+<span class="mdl-list__item-secondary-content">
+</span>
+</li>
+<li class="mdl-list__item mdl-list__item--three-line">
+<span class="mdl-list__item-primary-content">
+<a href="/posts/81">
+<span>不小心打開後就關不起來的Vim, 學Git 指令上最大的絆腳石？</span>
+<span class="mdl-list__item-text-body">
+是神還是魔鬼的編輯器Vim? 投降前先來聽聽Vi和Vim的介紹
+</span>
+</a> </span>
+<span class="mdl-list__item-secondary-content">
+</span>
+</li>
+<a href="javascript:void(0);" class="show_all" data-extended="0" style="color:rgba( 0, 0, 0, 0.56); float: right; margin-right: 16px;">顯示全部</a>
+<br class="reset_float" />
+</ul>
+<hr style="width: 92%; margin:auto;" />
+</aside>
+<aside class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+<h4 style="margin-bottom: 16px;">最新文章</h4>
+<hr style="width: 92%; margin:auto;" />
+<ul id="all-posts" class='mdl-list articles no_colors'>
+<li class="mdl-list__item mdl-list__item--three-line">
+<span class="mdl-list__item-primary-content">
+<a href="/posts/254">
+<span>有網站就不需要APP？放棄APP也放棄了超高價值的融入生活的再行銷方式</span>
+<span class="mdl-list__item-text-body">
+手機開發的利與弊，優秀的開發者除了幫你開發外還可以幫你解決商業痛點。
+</span>
+</a> </span>
+<span class="mdl-list__item-secondary-content">
+</span>
+</li>
+<li class="mdl-list__item mdl-list__item--three-line">
+<span class="mdl-list__item-primary-content">
+<a href="/posts/253">
+<span>商品募資超成功卻被下架！成為Maker前需先充分了解專利與智慧財產權嗎?</span>
+<span class="mdl-list__item-text-body">
+花萬把塊費時多年申請的專利是權狀還是獎狀？先看完這篇或許你可以不用冤旺走一遭！
+</span>
+</a> </span>
+<span class="mdl-list__item-secondary-content">
+</span>
+</li>
+<li class="mdl-list__item mdl-list__item--three-line">
+<span class="mdl-list__item-primary-content">
+<a href="/posts/252">
+<span>真的有紫色的牛？不、這只是一個行銷的策略，淺談運用與眾不同的紫牛行銷</span>
+<span class="mdl-list__item-text-body">
+創業Good idea？淺談產品行銷與紫牛實效
+</span>
+</a> </span>
+<span class="mdl-list__item-secondary-content">
+</span>
+</li>
+<li class="mdl-list__item mdl-list__item--three-line">
+<span class="mdl-list__item-primary-content">
+<a href="/posts/251">
+<span>行銷與再行銷的利器，會員系統讓你跟顧客互動的更準確</span>
+<span class="mdl-list__item-text-body">
+建立起消費者與品牌之間的連結，進而提升品牌忠誠！
+</span>
+</a> </span>
+<span class="mdl-list__item-secondary-content">
+</span>
+</li>
+<li class="mdl-list__item mdl-list__item--three-line">
+<span class="mdl-list__item-primary-content">
+<a href="/posts/250">
+<span>製作網站不能沒有談到的功能 - RWD響應式設計(自適應網頁)</span>
+<span class="mdl-list__item-text-body">
+RWD響應式設計已經是常識了，在規劃網站的時候絕對不能沒有它
+</span>
+</a> </span>
+<span class="mdl-list__item-secondary-content">
+</span>
+</li>
+<li class="mdl-list__item mdl-list__item--three-line">
+<span class="mdl-list__item-primary-content">
+<a href="/posts/249">
+<span>[不是工程師] 物件導向設計原則(SOLID)很繞口？試試從模組化開發與測試來理解吧！</span>
+<span class="mdl-list__item-text-body">
+程式總是寫成一大坨導致開發進度緩慢？是時候開始用模組化概念來開發與測試了！
+</span>
+</a> </span>
+<span class="mdl-list__item-secondary-content">
+</span>
+</li>
+<li class="mdl-list__item mdl-list__item--three-line">
+<span class="mdl-list__item-primary-content">
+<a href="/posts/248">
+<span>少壯不努力只能當PM? 當PM前你必須先學會的幾件事</span>
+<span class="mdl-list__item-text-body">
+先問釐清問題本身才是解決之道，別讓自己成為搞不清楚狀況的PM！
+</span>
+</a> </span>
+<span class="mdl-list__item-secondary-content">
+</span>
+</li>
+<li class="mdl-list__item mdl-list__item--three-line">
+<span class="mdl-list__item-primary-content">
+<a href="/posts/247">
+<span>你知道SEO是指「搜尋引擎優化」嗎？提升搜尋關鍵字又有哪些方法呢？</span>
+<span class="mdl-list__item-text-body">
+架設網站就是要讓人看見，如果沒有人在瀏覽就跟沒架是一樣的！
+</span>
+</a> </span>
+<span class="mdl-list__item-secondary-content">
+</span>
+</li>
+<li class="mdl-list__item mdl-list__item--three-line">
+<span class="mdl-list__item-primary-content">
+<a href="/posts/246">
+<span>架設一個企業形象網站需要考慮哪些部分呢？讓我們來列舉告訴你吧！</span>
+<span class="mdl-list__item-text-body">
+在網路的時代，無論是否是電商都應該至少要架設一個企業形象網站
+</span>
+</a> </span>
+<span class="mdl-list__item-secondary-content">
+</span>
+</li>
+<li class="mdl-list__item mdl-list__item--three-line">
+<span class="mdl-list__item-primary-content">
+<a href="/posts/245">
+<span>你認識最適合新手入門Linux發行版Ubuntu嗎？那你知道Debian為何常被一起提起？</span>
+<span class="mdl-list__item-text-body">
+想要學Linux嗎?VirtualBox ＋ Ubuntu裝下去就對了!
+</span>
+</a> </span>
+<span class="mdl-list__item-secondary-content">
+</span>
+</li>
+<a href="javascript:void(0);" class="show_all" data-extended="0" style="color:rgba( 0, 0, 0, 0.56); float: right; margin-right: 16px;">顯示全部</a>
+<br class="reset_float" />
+</ul>
+<hr style="width: 92%; margin:auto;" />
+</aside>
+</div>
+<div class="mdl-grid">
+<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+<h4 style="margin-bottom: 16px;">線上課程</h4>
+</div>
+<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+<a href="/courses/14">
+<div style="margin: 12px 0;">
+<div class="ratio_square">
+<div class="_inner">
+<div class="mdl-card mdl-shadow--2dp _content">
+<div class="mdl-card__title mdl-card--expand" style="background: url('https://progressbar.tw/uploads/course/card_image/14/large_ReactAndWebpack.jpg') center / cover;"></div>
+<div class="mdl-card__actions">
+<p style="line-height: 1.5em; height: 3em; overflow: hidden; text-align: left; margin-left: 8px; color: rgba(0, 0, 0, 0.86);">
+ES6,ReactJS與Webpack，前端JavaScript全攻略
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</a> </div>
+<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+<a href="/courses/13">
+<div style="margin: 12px 0;">
+<div class="ratio_square">
+<div class="_inner">
+<div class="mdl-card mdl-shadow--2dp _content">
+<div class="mdl-card__title mdl-card--expand" style="background: url('https://progressbar.tw/uploads/course/card_image/13/large_linuxWeb03.jpg') center / cover;"></div>
+<div class="mdl-card__actions">
+<p style="line-height: 1.5em; height: 3em; overflow: hidden; text-align: left; margin-left: 8px; color: rgba(0, 0, 0, 0.86);">
+Linux雲端伺服器，用AWS暸解Apache與Nginx
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</a> </div>
+<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+<a href="/courses/10">
+<div style="margin: 12px 0;">
+<div class="ratio_square">
+<div class="_inner">
+<div class="mdl-card mdl-shadow--2dp _content">
+<div class="mdl-card__title mdl-card--expand" style="background: url('https://progressbar.tw/uploads/course/card_image/10/large_WordPress_3x.png') center / cover;"></div>
+<div class="mdl-card__actions">
+<p style="line-height: 1.5em; height: 3em; overflow: hidden; text-align: left; margin-left: 8px; color: rgba(0, 0, 0, 0.86);">
+WordPress - 從頭教起的網站架設
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</a> </div>
+<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+<a href="/courses/3">
+<div style="margin: 12px 0;">
+<div class="ratio_square">
+<div class="_inner">
+<div class="mdl-card mdl-shadow--2dp _content">
+<div class="mdl-card__title mdl-card--expand" style="background: url('https://progressbar.tw/uploads/course/card_image/3/large_RubyOnRails_3x.png') center / cover;"></div>
+<div class="mdl-card__actions">
+<p style="line-height: 1.5em; height: 3em; overflow: hidden; text-align: left; margin-left: 8px; color: rgba(0, 0, 0, 0.86);">
+快速開發，從頭教起的Ruby on Rails後端之旅
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</a> </div>
+<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+<a href="/courses/11">
+<div style="margin: 12px 0;">
+<div class="ratio_square">
+<div class="_inner">
+<div class="mdl-card mdl-shadow--2dp _content">
+<div class="mdl-card__title mdl-card--expand" style="background: url('https://progressbar.tw/uploads/course/card_image/11/large_C_lang.png') center / cover;"></div>
+<div class="mdl-card__actions">
+<p style="line-height: 1.5em; height: 3em; overflow: hidden; text-align: left; margin-left: 8px; color: rgba(0, 0, 0, 0.86);">
+ C語言 - 近代程式語言的基礎
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</a> </div>
+<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+<a href="/courses/2">
+<div style="margin: 12px 0;">
+<div class="ratio_square">
+<div class="_inner">
+<div class="mdl-card mdl-shadow--2dp _content">
+<div class="mdl-card__title mdl-card--expand" style="background: url('https://progressbar.tw/uploads/course/card_image/2/large_HTML_16_9_2.png') center / cover;"></div>
+<div class="mdl-card__actions">
+<p style="line-height: 1.5em; height: 3em; overflow: hidden; text-align: left; margin-left: 8px; color: rgba(0, 0, 0, 0.86);">
+HTML, CSS, JavaScript, jQuery 網頁從零開始
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</a> </div>
+<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+<a href="/courses/12">
+<div style="margin: 12px 0;">
+<div class="ratio_square">
+<div class="_inner">
+<div class="mdl-card mdl-shadow--2dp _content">
+<div class="mdl-card__title mdl-card--expand" style="background: url('https://progressbar.tw/uploads/course/card_image/12/large_git_16_10.png') center / cover;"></div>
+<div class="mdl-card__actions">
+<p style="line-height: 1.5em; height: 3em; overflow: hidden; text-align: left; margin-left: 8px; color: rgba(0, 0, 0, 0.86);">
+Git程式版本管控 - 由簡單到難
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</a> </div>
+<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+<a href="/courses/1">
+<div style="margin: 12px 0;">
+<div class="ratio_square">
+<div class="_inner">
+<div class="mdl-card mdl-shadow--2dp _content">
+<div class="mdl-card__title mdl-card--expand" style="background: url('https://progressbar.tw/uploads/course/card_image/1/large_16_9_Bootstrap3.png') center / cover;"></div>
+<div class="mdl-card__actions">
+<p style="line-height: 1.5em; height: 3em; overflow: hidden; text-align: left; margin-left: 8px; color: rgba(0, 0, 0, 0.86);">
+行動第一! 使用Bootstrap建立響應式RWD網站!
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</a> </div>
+<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+<a href="/courses/7">
+<div style="margin: 12px 0;">
+<div class="ratio_square">
+<div class="_inner">
+<div class="mdl-card mdl-shadow--2dp _content">
+<div class="mdl-card__title mdl-card--expand" style="background: url('https://progressbar.tw/uploads/course/card_image/7/large_Swift3_2.png') center / cover;"></div>
+<div class="mdl-card__actions">
+<p style="line-height: 1.5em; height: 3em; overflow: hidden; text-align: left; margin-left: 8px; color: rgba(0, 0, 0, 0.86);">
+Swift3 初學 - 以手指鼓為例
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</a> </div>
+</div>
+</div>
+<script>
+  $(function(){
+    var limitedNumberOfRow = 4;
+    PBTool.ul.limitedList("#all-posts", limitedNumberOfRow);
+    PBTool.ul.limitedList("#related-posts", limitedNumberOfRow);
+
+    $(".show_all").click(function(){
+      var ul = $(this).closest("ul");
+      var toggle  = $(this).data("toggle");
+      if(toggle == "1"){
+        PBTool.ul.limitedList(ul, limitedNumberOfRow);
+        $(this).data("toggle", "0");
+        $(this).html("顯示全部");
+      }else{
+        PBTool.ul.extendAll(ul);
+        $(this).data("toggle", "1");
+        $(this).html("顯示部分");
+      }
+    });
+
+		$('iframe').each(function(index, iframe){
+			var jIframe = $(iframe);
+			var src = jIframe.data('src');
+			if(src){
+				jIframe.attr('src', src);
+			}
+		})
+
+    var video = videojs("videojs", {}, function(){
+      PBTool.videoJs.registerTimeControlButtons(this);
+    });
+  });
+
+  $('.serial_posts').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      centerMode: true,
+      centerPadding: '40px',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+</script>
+<script>
+	$(function(){
+		fbq('track', 'ViewContent', {
+			content_ids: '3',
+			content_type: 'Post',
+		});
+	})
+</script>
+<footer>
+<div class="_content">
+<div class="mdl-grid">
+<div class="mdl-cell mdl-cell--4-col _column1">
+<div style="display: table; width:100%;">
+<div style="display: table-cell; width: 50%;">
+<ul>
+<a href="/about_us">
+<li>關於進度條</li>
+</a> <a href="/terms">
+<li>服務條款</li>
+</a> <a href="/jobs">
+<li>徵才資訊</li>
+</a> </ul>
+</div>
+<div style="display: table-cell; width: 50%;">
+<ul>
+<a href="/questions">
+<li>常見問題</li>
+</a> <a href="/contact_us">
+<li>聯絡我們</li>
+</a> <a href="/free_resources">
+<li>其他資源</li>
+</a> </ul>
+</div>
+</div>
+</div>
+<div class="mdl-cell mdl-cell--4-col _column2">
+<div style="background-color: white; border-radius: 8px;;">
+<img style="width: 100%; padding: 8px ; box-sizing: border-box;" src="/assets/PaymentsLogo-26e8f10028f85f0bc6862da817dc568c7bf825a996baac3bd5cfacda0b6eb73b.png" alt="Paymentslogo" />
+</div>
+</div>
+<div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet _column3">
+<div style="display: table; width:100%;">
+<div style="display: table-cell; width:33%;">
+<a href="https://www.facebook.com/ProgressBarTW" target="_blank">
+<i class="fa fa-facebook _icon_link" aria-hidden="true" style="color: #3b5998;"></i>
+</a>
+</div>
+<div style="display: table-cell; width:33%;">
+<a href="https://www.youtube.com/channel/UCx9zGDevKEZ21ihod8A0i-w" target="_blank">
+<i class="fa fa-youtube-play _icon_link" aria-hidden="true" style="color: #cc181e;"></i>
+</a>
+</div>
+<div style="display: table-cell; width:34%;">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="_copyright">
+<div class="_content">
+<div class="mdl-grid">
+<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+<div class="fb-like" data-href="https://www.facebook.com/ProgressBarTW" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="false" data-colorscheme="dark"></div>
+</div>
+<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+Copyright © 2017 - 2019 Progress Bar, 本網站為思誠科技有限公司所有.
+</div>
+</div>
+</div>
+</div>
+</footer>
+<div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+<div class="mdl-snackbar__text"></div>
+<button type="button" class="mdl-snackbar__action" style="color: rgba(255, 255, 255, 0.56);"></button>
+</div>
+</main>
+</div>
+</div>
+<div id="fb-root"></div>
+<script>
+          window.fbAsyncInit = function() {
+            FB.init({
+                appId            : '373391753044058',
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v3.2'
+            });
+          };
+
+          (function(d, s, id){
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) {return;}
+              js = d.createElement(s); js.id = id;
+              js.src = '//connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+              fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+</script>
+<script src="/assets/dist/tools-50c003aebb0d35c80fe03e5d45c93e94682983a47f7b7396f07e123011d15bfc.js"></script>
+<script>
+  $(function(){
+    var result = PBTool.detectBroswer.get();
+    if(result){
+      var version = parseInt(result);
+      if(!isNaN(version) && version < 10){
+        var string = "您現在使用的是 IE" + version + "，";
+        string += "我們只支援到 IE11。\n";
+        string += "\n";
+        string += "為了讓我們提供您更好的服務品質，建議您使用以下最新版的瀏覽器\n";
+        string += "包含：Chrome / Firefox / Safari / Edge。\n";
+        string += "\n";
+        string += "感謝您的合作。"
+        alert(string);
+      }
+    }
+  });
+  
+  var once = true;
+  $('#main_body').on('mdl-componentupgraded', function(){
+    // not only once
+    if (once){
+      var anchor = window.location.hash;
+      if(anchor){
+        var anchorElement = $(anchor);
+        if(anchorElement.length){
+          var offset = $(anchor).offset().top - $("#page-content").offset().top;
+          $("main").scrollTop(offset);
+        }
+      }
+
+      PBToolV2.iframe.lazyload.activateAll();
+      once = false
+    }
+  });
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93695879-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<div class="fb-customerchat" page_id="1424227107627646" theme_color="#3a305e" logged_in_greeting="你好，請問有什麼可以解答的嗎？" logged_out_greeting="如果不想登入也可以透過email: service@progressbar.tw跟我們聯繫喔！" minimized=true>
+</div>
+</body>
+</html>
